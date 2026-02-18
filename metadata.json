@@ -1,0 +1,7 @@
+{
+  "name": "Sandra Lopes - Terapia Emocional",
+  "description": "Landing page elegante e acolhedora para uma terapeuta em Portugal, focada em mulheres, com estética de luz de velas e tons creme.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
