@@ -1,8 +1,8 @@
 
 {
-  "name": "sandra-lopes-terapia",
+  "name": "sandraterapeuta",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,10 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "vite": "^6.0.0",
-    "typescript": "^5.0.0"
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5"
   }
 }
