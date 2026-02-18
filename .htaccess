@@ -1,0 +1,21 @@
+
+# Configuração para Hostinger / Apache
+<IfModule mod_mime.c>
+  # Trata arquivos .tsx como javascript para que o Babel no navegador possa processá-los
+  AddType application/javascript .tsx
+</IfModule>
+
+# Garante que o servidor permita requisições de módulos
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# Opcional: Redireciona todo o tráfego para o index.html se você decidir usar rotas no futuro
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

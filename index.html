@@ -1,45 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essência & Equilíbrio | Terapia Emocional para Mulheres</title>
+    <title>Sandra Lopes | Terapia Emocional</title>
+    
+    <!-- Tailwind v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+    <!-- Babel Standalone para rodar React/TSX diretamente no navegador -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
+    
+    <style type="text/css">
+        @theme {
+          --font-serif: "Playfair Display", serif;
+          --font-sans: "Montserrat", sans-serif;
+        }
         body {
             font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
+            background-color: #FDFBF7;
+            margin: 0;
+            padding: 0;
+            color: #4A3F35;
         }
-        h1, h2, h3 {
+        #root:empty::before {
+            content: "A preparar o seu refúgio...";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #A67C52;
+            font-size: 1.2rem;
         }
         .candle-glow {
             filter: blur(80px);
-            background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, rgba(251, 191, 36, 0) 70%);
+            background: radial-gradient(circle, rgba(212, 163, 115, 0.2) 0%, rgba(212, 163, 115, 0) 70%);
         }
         .flicker {
-            animation: flicker-animation 4s infinite alternate;
+            animation: flicker 4s infinite alternate;
         }
-        @keyframes flicker-animation {
-            0% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.1); }
-            100% { opacity: 0.4; transform: scale(0.95); }
+        @keyframes flicker {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.6; }
         }
     </style>
-<script type="importmap">
+
+    <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react/": "https://esm.sh/react@^19.2.4/"
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
   }
 }
 </script>
 </head>
-<body class="bg-[#FDFBF7] text-[#4A3F35]">
+<body>
     <div id="root"></div>
+    
+    <!-- Único ponto de entrada para evitar conflitos de sincronização -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
 </body>
 </html>

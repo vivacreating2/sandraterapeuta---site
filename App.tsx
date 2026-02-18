@@ -1,12 +1,12 @@
 
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import TherapySection from './components/TherapySection';
-import ArticleSection from './components/ArticleSection';
-import Reviews from './components/Reviews';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import TherapySection from './components/TherapySection.tsx';
+import ArticleSection from './components/ArticleSection.tsx';
+import Reviews from './components/Reviews.tsx';
+import Contact from './components/Contact.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (
