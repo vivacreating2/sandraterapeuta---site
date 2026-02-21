@@ -24,23 +24,23 @@ const testimonials = [
 
 const Reviews: React.FC = () => {
   return (
-    <section id="depoimentos" className="py-24 px-6 bg-[#F2E8DF]/30 scroll-mt-24">
+    <section id="depoimentos" className="py-32 px-6 bg-white scroll-mt-24">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl font-serif text-[#4A3F35]">O que dizem as nossas <span className="italic text-[#D4A373]">mulheres</span></h2>
-          <p className="text-[#6D4C41] font-light">Partilhas de quem já percorreu o caminho.</p>
+        <div className="text-center mb-24 space-y-6">
+          <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-[#A67C52]">Testemunhos</span>
+          <h2 className="text-5xl md:text-6xl font-serif text-[#1A1A1A]">O que dizem as <span className="italic text-[#A67C52]">nossas pacientes</span></h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-12">
           {testimonials.map((t, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-3xl shadow-sm border border-[#F2E8DF] relative">
-              <div className="flex text-[#D4A373] mb-4">
+            <div key={idx} className="space-y-8 p-10 bg-[#F8F5F2] rounded-2xl transition-all duration-500 hover:shadow-xl">
+              <div className="flex text-[#A67C52] text-xs">
                 {[...Array(t.stars)].map((_, i) => <span key={i}>★</span>)}
               </div>
-              <p className="text-[#4A3F35] italic font-light mb-6 leading-relaxed">"{t.text}"</p>
-              <div>
-                <p className="font-bold text-sm uppercase tracking-wider text-[#4A3F35]">{t.name}</p>
-                <p className="text-xs text-[#BCAAA4]">{t.location}</p>
+              <p className="text-[#1A1A1A]/80 italic font-serif text-xl leading-relaxed">"{t.text}"</p>
+              <div className="pt-6 border-t border-[#1E293B]/10">
+                <p className="font-bold text-[10px] uppercase tracking-widest text-[#1A1A1A]">{t.name}</p>
+                <p className="text-[10px] text-[#A67C52] uppercase tracking-widest mt-1">{t.location}</p>
               </div>
             </div>
           ))}
